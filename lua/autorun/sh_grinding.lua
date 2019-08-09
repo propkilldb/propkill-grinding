@@ -1,7 +1,7 @@
 local ducking = {}
 
 function HandleGrinding(ply, mv, cmd)
-	if ducking[ply] and ply:IsOnGround() then
+	if ducking[ply] and ply:IsOnGround() and ply:GetGroundEntity() != NULL then
 		local dist = 70
 		local minSpeed = 210
 		local trace = {}
